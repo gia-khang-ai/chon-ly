@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tài Xỉu</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="tx-wrapper">
+  <header class="tx-hud">
+    <div class="balance">Số dư: <strong id="balance">0</strong> xu</div>
+    <div class="controls-right">
+      <button id="resetBalance" title="Đặt lại số dư">Đặt lại</button>
+      <button id="clearHistory" title="Xóa lịch sử">Xóa LS</button>
+    </div>
+  </header>
+
+  <section class="bet-section">
+    <div class="bet-amount">
+      <label for="betInput">Tiền cược</label>
+      <input id="betInput" type="number" min="1" step="1" value="1000">
+      <div class="chips">
+        <button data-chip="100">+100</button>
+        <button data-chip="500">+500</button>
+        <button data-chip="1000">+1k</button>
+        <button data-chip="5000">+5k</button>
+        <button id="clearBet">Xóa</button>
+      </div>
+    </div>
+    <div class="bet-choice">
+      <button id="betTai" class="choice">Tài (11–17)</button>
+      <button id="betXiu" class="choice">Xỉu (4–10)</button>
+    </div>
+    <div class="bet-current">Đang chọn: <strong id="currentChoice">Chưa chọn</strong></div>
+  </section>
+
+  <main class="dice-area">
+    <canvas id="diceCanvas" width="420" height="200" aria-label="Xúc xắc"></canvas>
+    <div class="roll-controls">
+      <button id="rollBtn">Tung xúc xắc</button>
+      <span id="resultText"></span>
+    </div>
+  </main>
+
+  <section class="history">
+    <h3>Lịch sử</h3>
+    <ul id="historyList"></ul>
+  </section>
+</div>
+
+<script src="cs.script.js"></script>
+</body>
+</html>
+
+
